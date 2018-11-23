@@ -5,21 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    defaults: {
-      dimensions: {
-        height: '700px',
-        width: '100%'
-      }
+    dimensions: {
+      height: '700px',
+      width: '100%'
     }
   },
   getters: {
     getDimensions (state) {
-      return state.defaults.dimensions
+      return state.dimensions
     }
   },
   mutations: {
     setWidth (state, width) {
-      state.defaults.dimensions.width = width
+      state.dimensions.width = width
     }
   },
   actions: {
